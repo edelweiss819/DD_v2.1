@@ -1,0 +1,43 @@
+@use "@styles/styles" as *;
+
+.content-container {
+  background: $grey-bg-color;
+  padding: 32px 0 32px 8px;
+  @include respond(tablet) {
+    padding-left: 0;
+  }
+
+}
+
+.content {
+  @include content;
+  @include grid;
+  gap: 16px;
+  @include respond(tablet) {
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+
+  }
+}
+
+.title {
+  @include font-main-black;
+  @include content;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid $aside-hr-color;
+  @include respond(tablet) {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+
+  }
+}

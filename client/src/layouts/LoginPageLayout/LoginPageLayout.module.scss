@@ -1,0 +1,63 @@
+@use "@styles/styles" as *;
+
+
+.main-wrapper {
+  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  background: url("../../assets/LoginBackgrounds/LoginBackground.svg") left bottom no-repeat #eff2f3;;
+  background-size: cover;
+  @include font-main-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond(tablet) {
+    background: #EFF2F3;
+  }
+}
+
+.container {
+  @include content-centred;
+  @include respond(tablet) {
+    max-width: 400px;
+    @include respond(mobile) {
+      max-width: 300px;
+    }
+  }
+
+  &-content-wrapper {
+    max-width: 500px;
+    position: relative;
+
+    &-h1 {
+      margin: 0;
+      margin-top: 16px !important;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 1.25;
+    }
+
+    &-social-block {
+      margin-top: 8px;
+
+      &-p {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      &-buttons-block {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+      }
+    }
+
+    &-form-title {
+      margin-top: 16px;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+  }
+}
+

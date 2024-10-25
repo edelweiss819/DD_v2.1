@@ -1,0 +1,10 @@
+@use "@styles/styles" as *;
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1000px;
+}
+
+
+

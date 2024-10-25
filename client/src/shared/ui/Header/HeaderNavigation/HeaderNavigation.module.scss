@@ -1,0 +1,47 @@
+@use '@styles/styles' as *;
+
+.nav {
+  &-container {
+    @include grid;
+    @include align-middle;
+    @include content;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    z-index: 100;
+
+    @include respond(tablet) {
+      margin-right: 16px;
+    }
+  }
+
+  &-link-container {
+    @include align-middle;
+    display: inline-flex;
+    height: 38px;
+    padding-bottom: 24px;
+    text-align: right;
+    margin: 0 0 -24px -24px !important;
+
+    @include respond(tablet) {
+      > div:nth-child(1),
+      > div:nth-child(2),
+      > div:nth-child(4) {
+        display: none;
+      }
+      @include respond(mobile) {
+        > div:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-link {
+    @include font-main;
+    color: $primary-text-color;
+    margin-left: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

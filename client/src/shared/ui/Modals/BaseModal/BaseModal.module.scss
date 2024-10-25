@@ -1,0 +1,41 @@
+@use "@styles/styles" as *;
+
+
+.modal {
+  &-centered {
+    &-background {
+      z-index: 99;
+      background-color: $active-modal-background-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    &-window {
+      z-index: 100;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      //min-width: 400px;
+      //min-height: 200px;
+      background-color: $primary-modal-color;
+      border-radius: 6px;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &-close-element {
+      position: absolute;
+      margin-top: 10px;
+      margin-right: 16px;
+      cursor: pointer;
+      float: right;
+    }
+  }
+}
+

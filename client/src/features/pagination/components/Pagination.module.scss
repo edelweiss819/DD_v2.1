@@ -1,0 +1,41 @@
+@use "@styles/styles" as *;
+
+.pagination-container {
+  margin-top: 32px;
+
+  @include respond(tablet) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.pagination {
+  & > span {
+    @include font-main-black;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 2px solid $pagination-cell-border-color;
+    background: $pagination-cell-bg-color;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 4px;
+    @include respond(tablet-large) {
+      font-size: 14px !important;
+      padding: 6px 12px;
+      margin: 0 2px;
+      @include respond(mobile) {
+        font-size: 16px !important;
+        padding: 2px 4px;
+      }
+    }
+  }
+
+  @include respond(tablet) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

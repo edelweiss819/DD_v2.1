@@ -1,0 +1,113 @@
+@use '@styles/styles' as *;
+
+
+.btn {
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+
+  &-m {
+    font-size: 16px !important;
+    padding: 8px 14px !important;
+    border: 2px solid;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  &-m-flex {
+    width: 100%;
+    font-weight: 500;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 6px;
+  }
+
+  &-l-flex {
+    width: 100%;
+    font-size: 18px !important;
+    padding: 16px !important;
+    border: 2px solid;
+    font-weight: 500;
+    border-radius: 6px;
+  }
+
+  &-nav-login {
+    padding: 8px 14px;
+    margin-left: 20px !important;
+    border: 2px solid;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  &-search {
+    font-size: 16px !important;
+    padding: 8px 14px !important;
+    border: 2px solid;
+    border-radius: 6px;
+    font-weight: 500;
+    line-height: 1.5 !important;
+  }
+
+
+  &-rs {
+    border-radius: 32px !important;
+    font-size: 12px !important;
+    line-height: 12px !important;
+    padding: 10px !important;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    filter: brightness(95%);
+  }
+
+  &-icon {
+    vertical-align: middle;
+    width: 24px;
+    margin-left: 8px;
+
+    &-no-margin {
+      margin-left: 0 !important;
+    }
+  }
+
+  &-text-respond {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+}
+
+
+@mixin button-style($bg-color, $border-color, $text-color, $font-mixin) {
+  @include select-font($font-mixin);
+  @include cell-shrink;
+  background-color: $bg-color;
+  border-color: $border-color;
+  display: inline-block;
+  text-align: center;
+  color: $text-color !important;
+}
+
+.btn-blue {
+  @include button-style($button-blue-color, $button-blue-color, $primary-text-color, 'main');
+}
+
+.btn-grey {
+  @include button-style($button-grey-color, $button-grey-color, $secondary-text-color, 'main-black');
+}
+
+.btn-white {
+  @include button-style($button-white-color, $button-white-color, $secondary-text-color, 'main-black');
+}
+
+.btn-dark-blue {
+  @include button-style($button-dark-blue-color, $button-dark-blue-color, $primary-text-color, 'main');
+}
+
+.btn-red {
+  @include button-style($button-red-color, $button-red-color, $primary-text-color, 'main');
+}
+
+

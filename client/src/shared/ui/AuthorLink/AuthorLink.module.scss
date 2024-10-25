@@ -1,0 +1,12 @@
+@use "@styles/styles" as *;
+
+.author-link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid $author-bottom-line-color;
+
+  &:hover {
+    border-bottom: 2px solid $author-bottom-line-hover-color;
+  }
+}

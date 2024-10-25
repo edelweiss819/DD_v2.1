@@ -1,0 +1,88 @@
+@use "colors" as *;
+@use "fonts" as *;
+
+@mixin content {
+  position: relative;
+  max-width: 1016px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  @include respond(mobile) {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+
+@mixin content-thin {
+  @include content;
+  max-width: 800px;
+
+}
+
+@mixin content-centred {
+  align-items: center;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+@mixin grid {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+
+@mixin align-middle {
+  align-items: center;
+}
+
+@mixin cell {
+  flex: 1;
+  min-width: 0;
+}
+
+@mixin cell-shrink {
+  flex: 0 1 auto;
+}
+
+@mixin cell-third {
+  width: 33.3% !important;
+}
+
+@mixin row-think {
+  padding: 32px 0;
+}
+
+@mixin articles-lists-title-block {
+  @include font-main-black;
+  background-color: $date-block-bg-color;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 16px 0;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == extra-small {
+    @media (max-width: 380px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-large {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}

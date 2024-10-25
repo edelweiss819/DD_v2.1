@@ -1,0 +1,122 @@
+@use '@styles/styles' as *;
+
+.main-section {
+  position: relative;
+  @include row-think;
+  background-color: $main-section-bg-color;
+  padding-left: 10px !important;
+  @include respond(tablet) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    @include respond(mobile) {
+      padding-left: 4px !important;
+      padding-right: 4px !important;
+    }
+  }
+}
+
+.content {
+  @include content;
+
+  &-pos {
+    @include grid;
+  }
+}
+
+aside {
+  @include cell-third;
+  @include font-main-black;
+  padding-left: 2px;
+  @include respond(tablet) {
+    display: none;
+  }
+}
+
+aside > h3 {
+  @include font-main-black;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 16px !important;
+}
+
+aside > hr {
+  border: 0;
+  height: 1px;
+  background: $aside-hr-color;
+  box-sizing: content-box;
+  overflow: visible;
+}
+
+.genre {
+  @include font-main-black;
+  margin: 0;
+  margin-bottom: 8px !important;
+
+
+  &-link {
+    @include font-main-black;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+.main {
+  flex: 1;
+  box-sizing: border-box;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  @include respond(tablet) {
+    padding-left: 0;
+    @include respond(extra-small) {
+      max-width: 370px;
+    }
+  }
+
+  &-total-articles {
+    @include font-main-black;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  & > main > p {
+    @include font-main-black;
+    font-weight: 400;
+    line-height: 28px;
+    position: relative;
+    margin: 0;
+    margin-bottom: 16px !important;
+    font-size: 20px;
+
+  }
+}
+
+
+.articles-list-container {
+  padding: 16px !important;
+  background: $white-bg-color;
+  border: 2px solid $article-list-border-color;
+  border-radius: 8px;
+
+  &-title {
+    @include font-main-black;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 16px !important;
+  }
+
+}
+
+.help-info {
+  @include font-main-black;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 11px;
+}

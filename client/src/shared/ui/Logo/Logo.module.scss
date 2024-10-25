@@ -1,0 +1,26 @@
+@use "@styles/styles" as *;
+
+.logo {
+  @include grid;
+  @include cell;
+  @include font-main;
+  @include align-middle;
+  text-decoration: none;
+  font-size: 30px;
+
+  &-first-part {
+    &-light {
+      color: $primary-text-color;
+    }
+
+    &-dark {
+      color: $secondary-text-color;
+    }
+  }
+
+  &-second-part {
+    &-blue {
+      color: $tertiary-text-color;
+    }
+  }
+}

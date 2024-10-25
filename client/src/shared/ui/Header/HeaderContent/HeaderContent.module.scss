@@ -1,0 +1,76 @@
+@use '@styles/styles' as *;
+
+.container {
+  @include content;
+  @include grid;
+  @include align-middle;
+  @include respond(tablet) {
+    margin-right: 16px
+  }
+}
+
+.left-block {
+  width: 62.5%;
+  flex: none;
+  overflow-x: hidden;
+  padding: 0 0 64px 0;
+  margin-top: 32px !important;
+  z-index: 1;
+
+  @include respond(tablet) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+}
+
+.description-xl {
+  @include font-main;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: $primary-text-color;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+.description-l {
+  @include font-main;
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0 !important;
+}
+
+.btns-container {
+  @include grid;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 16px !important;
+  margin-bottom: -8px !important;
+
+  @include respond(tablet) {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.right-block {
+  background: url("../../../../assets/HeaderBackgrounds/HeaderBackground.svg") no-repeat left bottom;
+  background-size: 100%;
+  position: absolute;
+  width: 620px;
+  height: 600px;
+  margin: 0;
+  left: initial;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 1;
+
+  @include respond(tablet) {
+    background: none;
+    width: 0;
+  }
+}

@@ -1,0 +1,31 @@
+@use "@styles/styles" as *;
+
+.footer {
+  background-color: $main-section-bg-color;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 2px solid $darker-line-color;
+  margin-top: auto;
+
+  &-content {
+    @include content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-text {
+      justify-content: center;
+      align-items: center;
+      @include font-main-black;
+      font-weight: normal;
+    }
+  }
+}

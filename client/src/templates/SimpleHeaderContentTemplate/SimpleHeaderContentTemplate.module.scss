@@ -1,0 +1,30 @@
+@use "@styles/styles" as *;
+
+
+.container {
+  min-width: 100%;
+  margin-left: -18px !important;
+  background-color: $single-article-title-bg-color;
+}
+
+.title-block {
+  @include content-thin;
+  @include font-main;
+  padding: 48px 0;
+
+
+  &-title {
+    padding-left: 26px;
+    padding-right: 24px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+
+    &-reg-date {
+      padding-top: 8px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+}

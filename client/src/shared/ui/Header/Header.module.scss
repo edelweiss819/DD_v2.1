@@ -1,0 +1,7 @@
+@use '@styles/styles' as *;
+
+.main-theme {
+  background-color: $primary-header-bg-color;
+  color: $primary-text-color;
+  padding-left: 14px !important;
+}

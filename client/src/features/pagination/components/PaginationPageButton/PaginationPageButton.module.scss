@@ -1,0 +1,11 @@
+@use "@styles/styles" as *;
+
+
+.active-page-button {
+  background-color: $secondary-bg-color !important;
+  color: $primary-text-color !important;
+}
+
+.remove-pointer {
+  cursor: auto !important;
+}

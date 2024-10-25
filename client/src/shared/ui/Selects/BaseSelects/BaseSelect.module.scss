@@ -1,0 +1,11 @@
+@use "@styles/styles" as *;
+
+.select {
+  &-search-options {
+    @include font-main-black;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 10px;
+    max-width: calc(25% - 10px)
+  }
+}

@@ -1,0 +1,34 @@
+@use "@styles/styles" as *;
+
+
+.main-section {
+  padding: 32px 0;
+  background: $white-bg-color;
+  @include respond(mobile) {
+    padding-top: 12px;
+  }
+
+  &-tabs {
+    border-bottom: 2px solid $profile-tabs-line-color;
+    margin-left: 16px;
+    padding-bottom: 12px;
+
+
+    &-container {
+      @include grid;
+      @include content-thin;
+      gap: 8px;
+    }
+  }
+
+  &-content-container {
+    @include content-thin;
+    padding: 0 24px;
+    min-height: 600px;
+    @include respond(mobile) {
+      margin-left: 4px;
+      margin-right: 6px;
+      min-height: 300px;
+    }
+  }
+}

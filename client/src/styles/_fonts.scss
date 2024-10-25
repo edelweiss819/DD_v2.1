@@ -1,0 +1,44 @@
+@use "colors" as *;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+@mixin font-main {
+  font-family: "Rubik", "Helvetica", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+
+}
+
+@mixin font-main-black {
+  font-family: "Rubik", "Helvetica", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  color: $secondary-text-color;
+
+}
+
+@mixin font-alt {
+  font-family: "Lora", "Helvetica", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+}
+
+@mixin font-alt-black {
+  font-family: "Lora", "Helvetica", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  color: $secondary-text-color;
+}
+
+@mixin select-font($font-type) {
+  @if $font-type == 'main' {
+    @include font-main;
+  } @else if $font-type == 'main-black' {
+    @include font-main-black;
+  } @else if $font-type == 'alt' {
+    @include font-alt;
+  } @else if $font-type == 'alt-black' {
+    @include font-alt-black;
+  }
+}

@@ -1,0 +1,68 @@
+@use "@styles/styles" as *;
+
+.single-article {
+  &-container {
+    padding: 24px 0;
+    border-top: 1px solid $single-article-line-color;
+
+    &:first-child {
+      margin-top: 16px;
+    }
+  }
+
+
+  &-title {
+    @include font-main;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    align-items: center;
+
+    &-avatar-container {
+      display: flex;
+    }
+  }
+
+  &-genres {
+    @include font-main;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $genres-text-color;
+  }
+
+  &-content {
+    @include font-alt-black;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+    overflow-wrap: break-word;
+  }
+
+  &-button-container {
+    @include grid;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    &-fav-block {
+      @include grid;
+      align-items: center;
+
+      &-fav-icon {
+        margin-top: 2px;
+      }
+
+      &-text {
+        @include font-main-black;
+        font-size: 16px;
+        margin-left: 2px;
+        text-align: center;
+      }
+    }
+
+  }
+
+}
+

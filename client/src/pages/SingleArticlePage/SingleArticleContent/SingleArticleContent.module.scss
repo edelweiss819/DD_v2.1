@@ -1,0 +1,56 @@
+@use "@styles/styles" as *;
+
+.main-section {
+  padding: 32px 0;
+  background: $white-bg-color;
+
+  &-content-container {
+    @include content-thin;
+    padding: 0 24px;
+    @include respond(mobile) {
+      padding-left: 22px;
+    }
+
+    &-delete-button-block {
+      display: flex;
+      justify-content: flex-end;
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+
+    &-author-block {
+      @include grid;
+      @include align-middle;
+      @include font-main-black;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+
+    &-genres-block {
+      @include grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    &-single-article {
+      @include font-main-black;
+      font-size: 18px;
+      line-height: 34px;
+      padding-bottom: 4px;
+      word-break: break-word;
+      margin-top: 20px !important;
+    }
+
+    &-error {
+      @include font-main-black;
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+}
+
+.paragraph:nth-child(n+2) {
+  margin-top: 35px;
+}

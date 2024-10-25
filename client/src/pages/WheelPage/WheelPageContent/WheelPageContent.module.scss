@@ -1,0 +1,22 @@
+@use "@styles/styles" as *;
+
+.content {
+  @include content-thin;
+  padding: 32px 0;
+
+  &-button-block {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-article-list-container {
+    display: flex;
+    flex-direction: column;
+
+    &-winning-articles {
+      @include articles-lists-title-block;
+      margin-bottom: 8px;
+    }
+  }
+
+}

@@ -1,0 +1,21 @@
+@use '@styles/styles' as *;
+
+.link-container {
+  background-color: $article-link-block-color;
+  text-decoration: none;
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(95%);
+  }
+
+  &-text {
+    @include font-main-black;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+}
